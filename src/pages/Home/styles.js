@@ -6,9 +6,6 @@ export const TitleContainer = styled.div`
     height: 120px;
     display: flex;
     justify-content: center;
-    img{
-        
-        }
 `
 
 export const InputContainer = styled.div``

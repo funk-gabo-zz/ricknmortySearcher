@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <>
             <TitleContainer>
-                <img src={Title} />
+                <img src={Title} width={320} />
             </TitleContainer>
             <SearchInput />
         </>

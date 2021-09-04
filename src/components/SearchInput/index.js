@@ -1,18 +1,24 @@
+import { useState } from "react";
 import { InputContainer } from "./styles";
 import { AiOutlineSearch } from "react-icons/ai";
+import Redirect from 'react-router-dom';
 
-export const SearchInput = ({ history }) => {
-    console.log(history)
+export const SearchInput = ({match}) => {
+    const [inputText, setInputText] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault()
-        history.push('/')
+        console.log(match)
+    }
+    const handleChange = (e) =>{
+        setInputText(e.target.value)
+        console.log(inputText)
     }
     return (
         <InputContainer>
             <form onSubmit={handleSubmit}>
-                <input type='text' />
+                <input onChange={handleChange} type='text' />
+                <button type='submit'><AiOutlineSearch size={22} /></button>
             </form>
-            <button type='submit'><AiOutlineSearch size={22} /></button>
-            </InputContainer>
+        </InputContainer>
     );
 }

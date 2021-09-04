@@ -38,7 +38,8 @@ module.exports = (env, argv) => {
         entry: './src/index.js',
         output: {
             filename: isProduction ? '[name].[contenthash].js' : 'main.js',
-            path: path.resolve(__dirname, 'dist')
+            path: path.resolve(__dirname, 'dist'),
+            publicPath: '/'
         },
         plugins: [
             new HtmlWebpackPlugin({ template: 'src/index.html' })
@@ -47,7 +48,8 @@ module.exports = (env, argv) => {
         devServer: {
             open: true,
             port: 3000,
-            compress: true
+            compress: true,
+            historyApiFallback: true,
         }
 
     }

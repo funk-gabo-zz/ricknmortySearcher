@@ -17,8 +17,13 @@ export const InputContainer = styled.div`
         outline: none;
         font-size: 22px;
     }
+    form{
+        display: flex;
+        justify-content: space-between;
+    }
     button{
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 `
