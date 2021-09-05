@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const DetailContainer = styled.div`
     width: 100%;
@@ -11,6 +12,7 @@ export const CharContainer = styled.div`
     width: 100%;
     max-width: 800px;
     height: 100vh;
+    position: relative;
 `
 
 export const TopChar = styled.div`
@@ -44,13 +46,29 @@ export const NameChar = styled.div`
 export const DetailCharContainer = styled.div`
     width: 100%;
     height: auto;
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 `
+export const BackContainer = styled(Link)`
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    margin: 10px;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #1ac51a;
+    background-color: #0b2f0b;
+    position: absolute;
+    top: 0;
+    left: 0;
+`
 
 export const colorChar = [
-    'red',
-    'purple',
-    'yellow',
-    'green'
+    '#a72525',
+    '#6b106b',
+    '#1a651a',
+    '#989818'
 ]

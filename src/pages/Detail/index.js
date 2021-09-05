@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { CharContainer, DetailCharContainer, DetailContainer, NameChar, TopChar } from "./styles"
+import { BackContainer, CharContainer, DetailCharContainer, DetailContainer, NameChar, TopChar } from "./styles"
 import { colorChar } from "./styles"
 import { DetailChar } from "../../components/DetailChar"
+import { IoArrowUndo } from "react-icons/io5";
 
 export const Detail = ({ match }) => {
     const [char, setChar] = useState([])
@@ -25,8 +26,14 @@ export const Detail = ({ match }) => {
                     <span>{char.name}</span>
                 </NameChar>
                 <DetailCharContainer>
-                    {colorChar.map(color => <DetailChar color={color} />)}
+                    <DetailChar color={colorChar[0]} att={'gender'} value={char.gender} />
+                    <DetailChar color={colorChar[1]} att={'species'} value={char.species} />
+                    <DetailChar color={colorChar[2]} att={'status'} value={char.status} />
+                    <DetailChar color={colorChar[3]} att={'type'} value={char.type} />
                 </DetailCharContainer>
+                <BackContainer to='/'>
+                <span><IoArrowUndo size={30} /></span>
+                </BackContainer>
             </CharContainer>
         </DetailContainer>
     )

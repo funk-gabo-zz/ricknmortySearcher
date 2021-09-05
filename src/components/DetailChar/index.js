@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { CharItem, TitleChar, TitleCharContainer } from "./styles";
 
-export const CharItem = styled.div`
-    min-width: 320px;
-    max-width: 425px;
-    height: 200px;
-    background-color: ${({color}) => color};
-`
 
-export const DetailChar = ({color}) => {
+
+export const DetailChar = ({ color, value, att }) => {
     return (
-            <CharItem color={color} />
+        <CharItem color={color}>
+            <TitleCharContainer>
+                <TitleChar>{att}</TitleChar>
+            </TitleCharContainer>
+            <span>{value ? value : 'none'}</span>
+        </CharItem>
     );
 }
