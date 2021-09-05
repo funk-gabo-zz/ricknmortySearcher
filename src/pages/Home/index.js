@@ -9,16 +9,17 @@ import { ListOfCards } from "../../components/ListOfCards";
 
 export const Home = () => {
     const [inputText, setInputText] = useState('')
+    const [inputSearch, setInputSearch] = useState('')
 
-    const [data] = useApi(`https://rickandmortyapi.com/api/character/?name=rick`)
+    const [data] = useApi(`https://rickandmortyapi.com/api/character/?name=${inputSearch}`)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(inputText)
+        setInputSearch(inputText)
     }
     const handleChange = (e) => {
-        setInputText(e.target.value)
         console.log(inputText)
+        setInputText(e.target.value)
     }
     return (
         <HomeContainer>

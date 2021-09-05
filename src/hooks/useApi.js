@@ -11,7 +11,7 @@ export const useApi = (url) => {
             setData(data)
         }
         getData()
-    }, [])
+    }, [url])
 
     return [data]
 }

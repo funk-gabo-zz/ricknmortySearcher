@@ -25,6 +25,5 @@ export const CardNameContainer = styled.div`
     padding: 5px;
     text-align: center;
     line-height: 26px;
-    margin-top: -8px;
     font-weight: 600;
 `

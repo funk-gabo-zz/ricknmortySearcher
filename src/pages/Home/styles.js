@@ -10,7 +10,7 @@ export const TitleContainer = styled.div`
 
 export const HomeContainer = styled.div`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #333;
     color: wheat;
     display: flex;
@@ -29,11 +29,12 @@ export const InputContainer = styled.div`
     height: 20px;
     padding: 10px;
     input{
-        width: 90%;
-        height: 20px;
+        width: 260px;
+        height: 24px;
         border: none;
         outline: none;
-        font-size: 22px;
+        font-size: 19px;
+        text-align: center;
     }
     form{
         display: flex;
