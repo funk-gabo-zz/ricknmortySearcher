@@ -2,11 +2,17 @@ import { Card } from "../Card";
 import { ListOfCardsContainer } from "./styles";
 
 
-export const ListOfCards = () => {
-    const array = [1,2,3,4,5];
+export const ListOfCards = ({data}) => {
+    if(!data.results){
+        return null
+    }
     return (
         <ListOfCardsContainer>
-        {array.map(card => < Card key={card} />)}
+        {data.results.map((char => <Card 
+            key={char.id}
+            name={char.name}
+            image={char.image}
+            />))}
         </ListOfCardsContainer>
     );
 }

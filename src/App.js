@@ -1,22 +1,16 @@
 import { GlobalStyle } from "./styles/globalStyles";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Layout } from "./components/Layout";
-import { Searched } from "./pages/Searched";
+import { Home } from "./pages/Home";
 
-const App = ({match}) => {
-    console.log(match)
+const App = () => {
     return (
         <>
             <GlobalStyle />
             <Router>
-                <Layout>
-                    <Switch>
-                        <Route path='/' exact component={Searched} />
-                        <Route path='/searched/:word?' component={Searched} />
-                    </Switch>
-                </Layout>
+                <Switch>
+                    <Route path='/' exact component={Home} />
+                </Switch>
             </Router>
-
         </>
     )
 }

@@ -18,6 +18,7 @@ export const CardContainer = styled.div`
 export const CardNameContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 22px;
     width: 100%;
     height: 40px;

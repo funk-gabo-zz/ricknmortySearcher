@@ -1,11 +1,11 @@
 import { CardContainer, CardNameContainer } from "./styles";
 
-export const Card = () => {
+export const Card = ({name, image}) => {
     return (
         <CardContainer>
-            <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt='Summer' />
+            <img src={image} alt='Summer' />
             <CardNameContainer>
-                <span>El mounstuo verde del lago nes</span>
+                <span>{name}</span>
             </CardNameContainer>
         </CardContainer>
     );
