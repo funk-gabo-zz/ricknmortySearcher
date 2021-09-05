@@ -18,7 +18,6 @@ export const Home = () => {
         setInputSearch(inputText)
     }
     const handleChange = (e) => {
-        console.log(inputText)
         setInputText(e.target.value)
     }
     return (

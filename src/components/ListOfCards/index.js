@@ -10,6 +10,7 @@ export const ListOfCards = ({data}) => {
         <ListOfCardsContainer>
         {data.results.map((char => <Card 
             key={char.id}
+            id={char.id}
             name={char.name}
             image={char.image}
             />))}
